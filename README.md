@@ -59,7 +59,7 @@ Chạy server
 npm run start
 ```
 
-Mở Trình duyệt, truy cập vào trang [localhost tại port 3000](http://localhost:3000/photos). Nếu có dòng `"fromCache":false`, server đang hoạt động tốt.
+Mở Trình duyệt, truy cập vào trang [localhost tại port 3000: http://localhost:3000/photos](http://localhost:3000/photos). Nếu có dòng `"fromCache":false`, server đang hoạt động tốt.
 
 Reload lại trang [localhost tại port 3000](http://localhost:3000/photos). Nếu có dòng `"fromCache":true`, server chạy đúng yêu cầu.
 
