@@ -19,6 +19,62 @@ Caching là một kỹ thuật tăng độ truy xuất dữ liệu và giảm t�
 
 ![image](https://images.viblo.asia/89732de7-b554-422a-9ed9-e4ef9352fc29.png)
 
+## Sử dụng
+
+Yêu cầu máy đã có sẵn git, redis và node.js
+
+Kiểm tra git đã có sẵn trên máy bằng lệnh
+
+```console
+git --version
+```
+
+Kiểm tra redis server đã có sẵn trên máy bằng lệnh
+
+```console
+redis-server -v
+```
+
+Kiểm tra node.js đã có sẵn trên máy bằng lệnh
+
+```console
+node -v
+```
+
+Clone repo
+
+```console
+git clone https://github.com/TuanKietTran/RedisMQ.git && cd "$_"
+```
+
+Cài đặt package cho server
+
+```console
+npm i --save
+```
+
+Chạy server
+
+```console
+npm run start
+```
+
+Mở Trình duyệt, truy cập vào trang [localhost tại port 3000](http://localhost:3000/photos). Nếu có dòng `"fromCache":false`, server đang hoạt động tốt.
+
+Reload lại trang [localhost tại port 3000](http://localhost:3000/photos). Nếu có dòng `"fromCache":true`, server chạy đúng yêu cầu.
+
+Mở Redis Client ở một terminal mới
+
+```console
+redis-cli
+```
+
+Chạy lệnh
+
+```console
+flushall
+```
+Reload lại trang [localhost tại port 3000](http://localhost:3000/photos). Nếu có dòng `"fromCache":false`, server chạy đúng yêu cầu.
 
 
 ## Reference
